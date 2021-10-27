@@ -21,7 +21,7 @@ class Query(graphene.ObjectType):
     
     all_employees = SQLAlchemyConnectionField(Employee.connection)
 
-    add_departments = SQLAlchemyConnectionField(Department.connection, sort=None)
+    all_departments = SQLAlchemyConnectionField(Department.connection, sort=None)
 
 
 schema = graphene.Schema(query=Query)
